@@ -1,0 +1,36 @@
+// Program: The GUI Triangle One
+// Filename: TriangleInputWindow.java
+// Date: 9.13.15 (Due 9.23.15)
+// Description: This file pretty much builds a window of dimensions 500x300.
+
+package triangleshapeimplementation;
+import javax.swing.JFrame;
+import java.awt.Graphics;
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.BorderLayout;
+
+public class TriangleInputWindow 
+{
+    public TriangleInputWindow()
+    {}
+   
+    void drawFrame()
+    {
+        JFrame frame = new JFrame("FrameDemo");                                 // New object of JFrame class, a built-in API in java.
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                   // Makes it so the program closes when you click the x in the corner.
+        JLabel emptyLabel = new JLabel("Hello world");                          // Sets a label for the frame - essentially a caption for some piece of content like an image.
+        //frame.pack();                                                         // frame.pack() automatically resizes the frame to fit the size of the components within the frame. Use this if you don't want to manually set the size with the following line of code.
+        frame.setSize(500, 300);                                                // Manually sets the size of the frame
+        frame.getContentPane().add(emptyLabel, BorderLayout.CENTER);            // Manually adds the specified content to the frame(our label)
+        frame.setVisible(true);                                                 // Makes it so you can actually see the frame
+        
+    }
+    void exitProgram()
+    {
+        System.out.println("Peace.");
+        System.exit(0);
+    }
+}
